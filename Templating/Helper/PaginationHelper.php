@@ -95,11 +95,11 @@ class PaginationHelper extends Helper
 
         $this->route = $this->request->get('_route');
         $this->params = array_merge($this->request->query->all(), $this->request->attributes->all());
-	  foreach ($this->params as $key => $param) {
+        foreach ($this->params as $key => $param) {
             if (substr($key, 0, 1) == '_') {
                 unset($this->params[$key]);
-		}
-	  }
+            }
+        }
     }
 
     /**
